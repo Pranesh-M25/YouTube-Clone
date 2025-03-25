@@ -1,0 +1,195 @@
+.header{
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: white;
+  border-bottom: solid 1px rgb(192, 192, 192);
+  z-index: 100;
+  
+}
+
+.left{
+  display: flex;
+  align-items: center;
+  
+}
+.middle{
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  flex: 1;
+}
+.right{
+  display: flex;
+  width: 180px;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: space-between;
+  min-width: none;
+  
+}
+.sidebar{
+  position: fixed;
+  background-color: white;
+  top: 55px;
+  bottom: 0;
+  left: 0;
+  width: 72px;
+  z-index: 200;
+}
+.ham{
+  margin-left: 24px;
+  height: 24px;
+}
+.ytLogo{
+  margin-left: 25px;
+  height: 20px;
+}
+
+.searchBar{
+  text-indent: 12px;
+  flex: 1;
+  border: solid 1px rgb(192, 192, 192);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  height: 34px;
+  font-size: 16px;
+  box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+  width: 0;
+}
+.searchBar::placeholder{
+  font-size: 1rem;
+  
+}
+button{
+  cursor: pointer;
+}
+.searchBtn{
+  position: relative;
+  background-color: rgb(240, 240, 240);
+  border: solid 1px rgb(192, 192, 192);
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-left: 0;
+  width: 60px;
+  height: 38px;
+  margin-left: -1.5px;
+  margin-right: 10px;
+}
+.searchLogo{
+  width: 25px;
+  
+}
+.voiceBtn{
+  background-color: rgb(240, 240, 240);
+  border: solid 1px rgb(240, 240, 240);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+.voiceIcon{
+  position: relative;
+  height: 24px;
+  cursor: pointer;
+}
+.uploadIcon{
+  position: relative;
+  width: 24px;
+  cursor: pointer;
+}
+.ytAppsIcon{
+  position: relative;
+  width: 24px;
+  cursor: pointer;
+}
+.notificationsIcon{
+  position: relative;
+  width: 24px;
+  cursor: pointer;
+}
+.not{
+  position: relative;
+}
+.notCount{
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  background-color:rgb(200, 0, 0);
+  border-radius: 10px;
+  padding: 2px 5px 2px 5px;
+  top: -2px;
+  right: -5px;
+
+}
+.accountPfp{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sidebarIcon{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 74px;
+  margin-bottom: 1px;
+  top: 24px;
+  transition: 0.3s;
+}
+
+.sidebarIcon:hover{
+  background-color: rgb(238, 238, 238);
+}
+
+.icon{
+  width: 24px;
+}
+.iconName{
+  font-size: 10px;
+  margin-top: 7px;
+}
+.upload,.ytApps,.not,.voiceBtn{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchBtn .tooltip ,
+.voiceBtn .tooltip,
+.upload .tooltip,
+.ytApps .tooltip,
+.not .tooltip{
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: 0.2s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.searchBtn:hover .tooltip,
+.voiceBtn:hover .tooltip,
+.upload:hover .tooltip,
+.ytApps:hover .tooltip,
+.not:hover .tooltip{
+  opacity: 1;
+}
