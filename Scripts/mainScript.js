@@ -97,7 +97,7 @@ let videos=[{
   channel:'Lonely Lavender',
   videolink:'https://youtube.com/watch?v=lqciIGLAgLM',
   channelLink:'https://www.youtube.com/@LonelyLavenderr'
-}, {
+},{
   thumbnail:'../YouTube Project/thumbnails/thumbnail-12.JPG',
   duration:'11:03',
   pfp:`../YouTube Project/pfp's/video 12 pfp.JPG`,
