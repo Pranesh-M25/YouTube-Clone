@@ -106,4 +106,33 @@ let videos=[{
   channel:'Paint Professor',
   videolink:'https://youtube.com/watch?v=TApCjAthDf4',
   channelLink:'https://www.youtube.com/@ThePaintProf'
-}]
+}];
+
+// This is the part that was missing
+let videoHTML ='';
+
+videos.forEach((video) => {
+  videoHTML += ` <div class="video1">
+      <div class="thumbDiv">
+        <a href="${video.videolink}">
+        <img class="thumb1" src="${video.thumbnail}" alt=""> </a>
+        <div class="duration">${video.duration}
+        </div>
+      </div>
+      <div class="videoGrid">
+        <div class="pfpDiv">
+        <a href="${video.channelLink}">
+          <img class="videoPfp" src="${video.pfp}" alt=""> </a>
+        </div>
+        <div class="infoDiv">
+          <a href="${video.videolink}">
+          <p class="videoTitle">${video.title}</p>
+          <p class="videoViews">${video.views}</p>
+          <p class="videoChannel">${video.channel}</p> </a>
+        </div>
+      </div>
+    </div>`
+});
+
+// This line is now correct
+document.querySelector('.domContainer').innerHTML = videoHTML;
