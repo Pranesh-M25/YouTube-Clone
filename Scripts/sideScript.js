@@ -17,17 +17,3 @@ let sideBar=[{
   icon:'./Icons/library.svg',
   name:'Library'
 }]
-
-let sidebarHTML='';
-
-sideBar.forEach((sides) => {
-  sidebarHTML += `
-  <div class="sidebarIcon">
-      <img class="icon" src="${sides.icon}" alt="">
-      <p class="iconName">${sides.name}</p>
-    </div>
-  `
-})
-
-document.querySelector('.domSide').
-innerHTML = sidebarHTML;
