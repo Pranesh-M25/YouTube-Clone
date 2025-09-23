@@ -57,7 +57,11 @@
   display: flex;
   flex: 1;
 }
+<<<<<<< HEAD
 .searchBar {
+=======
+.searchBar{
+>>>>>>> 9b7f2d90d70b2d8c92f66b6f42da18f9622e5424
   text-indent: 12px;
   flex: 1;
   border: solid 1px rgb(192, 192, 192);

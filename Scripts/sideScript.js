@@ -16,8 +16,9 @@ let sideBar=[{
 }, {
   icon:'./Icons/library.svg',
   name:'Library'
-}]
+}];
 
+// This is the part that was missing
 let sidebarHTML='';
 
 sideBar.forEach((sides) => {
@@ -27,7 +28,7 @@ sideBar.forEach((sides) => {
       <p class="iconName">${sides.name}</p>
     </div>
   `
-})
+});
 
-document.querySelector('.domSide').
-innerHTML = sidebarHTML;
+// This line is now correct
+document.querySelector('.domSide').innerHTML = sidebarHTML;
