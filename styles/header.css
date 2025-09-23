@@ -56,13 +56,17 @@
   height: 20px;
 }
 
+#search-form {
+  display: flex;
+  flex: 1;
+}
 .searchBar{
   text-indent: 12px;
   flex: 1;
   border: solid 1px rgb(192, 192, 192);
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  height: 34px;
+  height: 36px; /* Changed from 34px to 36px */
   font-size: 16px;
   box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
   width: 0;
