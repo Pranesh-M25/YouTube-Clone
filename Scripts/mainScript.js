@@ -142,8 +142,7 @@ searchForm.addEventListener('submit', handleSearch);
 async function handleSearch(event) {
   event.preventDefault();
   const searchTerm = searchInput.value;
-  const API_KEY = 'AIzaSyDWqsy1_LW4dTb3qwiA2nnfaZEAbO8HC3M'; // Replace with your actual API key
-  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchTerm}&key=${API_KEY}&maxResults=12&type=video`;
+const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchTerm}&key=${API_KEY}&maxResults=12&type=video`;
 
   try {
     const response = await fetch(url);
