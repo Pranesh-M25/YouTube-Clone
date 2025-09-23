@@ -108,7 +108,6 @@ let videos=[{
   channelLink:'https://www.youtube.com/@ThePaintProf'
 }];
 
-// This is the part that was missing
 let videoHTML ='';
 
 videos.forEach((video) => {
@@ -133,6 +132,47 @@ videos.forEach((video) => {
       </div>
     </div>`
 });
-
-// This line is now correct
 document.querySelector('.domContainer').innerHTML = videoHTML;
+
+const searchForm = document.getElementById('search-form');
+const searchInput = document.querySelector('.searchBar');
+
+searchForm.addEventListener('submit', handleSearch);
+
+async function handleSearch(event) {
+  event.preventDefault();
+  const searchTerm = searchInput.value;
+  const API_KEY = 'YOUR_YOUTUBE_API_KEY'; // Replace with your actual API key
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchTerm}&key=${API_KEY}&maxResults=12&type=video`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    displaySearchResults(data.items);
+  } catch (error) {
+    console.error('Error fetching search results:', error);
+  }
+}
+
+function displaySearchResults(videos) {
+  let videoHTML = '';
+  videos.forEach((video) => {
+    videoHTML += `
+      <div class="video1">
+        <div class="thumbDiv">
+          <a href="https://www.youtube.com/watch?v=${video.id.videoId}">
+            <img class="thumb1" src="${video.snippet.thumbnails.high.url}" alt="">
+          </a>
+        </div>
+        <div class="videoGrid">
+          <div class="infoDiv">
+            <a href="https://www.youtube.com/watch?v=${video.id.videoId}">
+              <p class="videoTitle">${video.snippet.title}</p>
+              <p class="videoChannel">${video.snippet.channelTitle}</p>
+            </a>
+          </div>
+        </div>
+      </div>`;
+  });
+  document.querySelector('.domContainer').innerHTML = videoHTML;
+}
