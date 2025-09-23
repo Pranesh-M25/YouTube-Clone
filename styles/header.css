@@ -1,4 +1,4 @@
-.header{
+.header {
   top: 0;
   left: 0;
   right: 0;
@@ -13,15 +13,13 @@
   background-color: white;
   border-bottom: solid 1px rgb(192, 192, 192);
   z-index: 100;
-  
 }
 
-.left{
+.left {
   display: flex;
   align-items: center;
-  
 }
-.middle{
+.middle {
   display: flex;
   align-items: center;
   margin-left: 70px;
@@ -29,16 +27,15 @@
   max-width: 500px;
   flex: 1;
 }
-.right{
+.right {
   display: flex;
   width: 180px;
   margin-right: 20px;
   align-items: center;
   justify-content: space-between;
   min-width: none;
-  
 }
-.sidebar{
+.sidebar {
   position: fixed;
   background-color: white;
   top: 55px;
@@ -47,34 +44,37 @@
   width: 72px;
   z-index: 200;
 }
-.ham{
+.ham {
   margin-left: 24px;
   height: 24px;
 }
-.ytLogo{
+.ytLogo {
   margin-left: 25px;
   height: 20px;
 }
 
-.searchBar{
+#search-form {
+  display: flex;
+  flex: 1;
+}
+.searchBar {
   text-indent: 12px;
   flex: 1;
   border: solid 1px rgb(192, 192, 192);
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  height: 34px;
+  height: 36px; /* Changed from 34px to 36px */
   font-size: 16px;
-  box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
   width: 0;
 }
-.searchBar::placeholder{
+.searchBar::placeholder {
   font-size: 1rem;
-  
 }
-button{
+button {
   cursor: pointer;
 }
-.searchBtn{
+.searchBtn {
   position: relative;
   background-color: rgb(240, 240, 240);
   border: solid 1px rgb(192, 192, 192);
@@ -88,58 +88,56 @@ button{
   margin-left: -1.5px;
   margin-right: 10px;
 }
-.searchLogo{
+.searchLogo {
   width: 25px;
-  
 }
-.voiceBtn{
+.voiceBtn {
   background-color: rgb(240, 240, 240);
   border: solid 1px rgb(240, 240, 240);
   border-radius: 50%;
   height: 40px;
   width: 40px;
 }
-.voiceIcon{
+.voiceIcon {
   position: relative;
   height: 24px;
   cursor: pointer;
 }
-.uploadIcon{
+.uploadIcon {
   position: relative;
   width: 24px;
   cursor: pointer;
 }
-.ytAppsIcon{
+.ytAppsIcon {
   position: relative;
   width: 24px;
   cursor: pointer;
 }
-.notificationsIcon{
+.notificationsIcon {
   position: relative;
   width: 24px;
   cursor: pointer;
 }
-.not{
+.not {
   position: relative;
 }
-.notCount{
+.notCount {
   color: white;
   font-size: 10px;
   position: absolute;
-  background-color:rgb(200, 0, 0);
+  background-color: rgb(200, 0, 0);
   border-radius: 10px;
   padding: 2px 5px 2px 5px;
   top: -2px;
   right: -5px;
-
 }
-.accountPfp{
+.accountPfp {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   cursor: pointer;
 }
-.sidebarIcon{
+.sidebarIcon {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -151,28 +149,31 @@ button{
   transition: 0.3s;
 }
 
-.sidebarIcon:hover{
+.sidebarIcon:hover {
   background-color: rgb(238, 238, 238);
 }
 
-.icon{
+.icon {
   width: 24px;
 }
-.iconName{
+.iconName {
   font-size: 10px;
   margin-top: 7px;
 }
-.upload,.ytApps,.not,.voiceBtn{
+.upload,
+.ytApps,
+.not,
+.voiceBtn {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.searchBtn .tooltip ,
+.searchBtn .tooltip,
 .voiceBtn .tooltip,
 .upload .tooltip,
 .ytApps .tooltip,
-.not .tooltip{
+.not .tooltip {
   position: absolute;
   background-color: gray;
   color: white;
@@ -190,6 +191,6 @@ button{
 .voiceBtn:hover .tooltip,
 .upload:hover .tooltip,
 .ytApps:hover .tooltip,
-.not:hover .tooltip{
+.not:hover .tooltip {
   opacity: 1;
 }
