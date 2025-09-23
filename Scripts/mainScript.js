@@ -155,24 +155,27 @@ async function handleSearch(event) {
 }
 
 function displaySearchResults(videos) {
-  let videoHTML = '';
+  let searchResultsHTML = '';
   videos.forEach((video) => {
-    videoHTML += `
+    searchResultsHTML += `
       <div class="video1">
         <div class="thumbDiv">
-          <a href="https://www.youtube.com/watch?v=${video.id.videoId}">
+          <a href="https://www.youtube.com/watch?v=${video.id.videoId}" target="_blank">
             <img class="thumb1" src="${video.snippet.thumbnails.high.url}" alt="">
           </a>
         </div>
         <div class="videoGrid">
+          <div class="pfpDiv">
+            </div>
           <div class="infoDiv">
-            <a href="https://www.youtube.com/watch?v=${video.id.videoId}">
+            <a href="https://www.youtube.com/watch?v=${video.id.videoId}" target="_blank">
               <p class="videoTitle">${video.snippet.title}</p>
-              <p class="videoChannel">${video.snippet.channelTitle}</p>
+              <p class="videoViews">${video.snippet.channelTitle}</p>
+              <p class="videoChannel">Published on ${new Date(video.snippet.publishTime).toLocaleDateString()}</p>
             </a>
           </div>
         </div>
       </div>`;
   });
-  document.querySelector('.domContainer').innerHTML = videoHTML;
+  document.querySelector('.domContainer').innerHTML = searchResultsHTML;
 }
